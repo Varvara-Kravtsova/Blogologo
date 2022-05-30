@@ -1,6 +1,11 @@
 import { Navigate } from "react-router-dom";
-import { routers } from "../routes/routers";
+import { routes } from "../routes/routes";
 
 export const Home = () => {
- return <Navigate to={routers.SIGN_UP} />;
+ return (
+  <div>
+   <h1>Home</h1>
+   <Navigate to={routes.HOME} />
+  </div>
+ );
 };
