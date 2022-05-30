@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { routers } from "../routes/routers";
+import { routes } from "../routes/routes";
 
 const Login = () => {
  return (
   <div>
    <h1>Login</h1>
-   <Link to={routers.SIGN_UP}>Go to register</Link>
+   <Link to={routes.SIGN_UP}>Go to register</Link>
   </div>
  );
 };

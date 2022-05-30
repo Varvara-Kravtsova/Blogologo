@@ -3,15 +3,15 @@ import { Home } from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
-import { routers } from "../routes/routers";
+import { routes } from "../routes/routes";
 
 export const AppRouter = () => {
  return (
   <Routes>
-   <Route path={routers.HOME} element={<Home />} />
-   <Route path={routers.SIGN_IN} element={<Login />} />
-   <Route path={routers.SIGN_UP} element={<Register />} />
-   <Route path={routers.NOT_FOUND} element={<NotFound />} />
+   <Route path={routes.HOME} element={<Home />} />
+   <Route path={routes.SIGN_IN} element={<Login />} />
+   <Route path={routes.SIGN_UP} element={<Register />} />
+   <Route path={routes.NOT_FOUND} element={<NotFound />} />
   </Routes>
  );
 };
