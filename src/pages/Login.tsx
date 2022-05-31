@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { routes } from "../routes/routes";
 
-const Login = () => {
+export const Login = () => {
  return (
   <div>
    <h1>Login</h1>
@@ -9,5 +9,3 @@ const Login = () => {
   </div>
  );
 };
-
-export default Login;
