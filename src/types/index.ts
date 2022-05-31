@@ -6,3 +6,8 @@ export interface IBook {
  image: string;
  url: string;
 }
+
+export interface IUserStore {
+ isAuth: boolean;
+ email: string | null;
+}
