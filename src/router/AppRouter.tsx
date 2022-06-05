@@ -7,7 +7,7 @@ export const AppRouter = () => {
  return (
   <Routes>
    <Route path={routes.HOME} element={<MainTemplate />}>
-    <Route path={routes.HOME} element={<Home />} />
+    <Route index element={<Home />}></Route>
    </Route>
   </Routes>
  );

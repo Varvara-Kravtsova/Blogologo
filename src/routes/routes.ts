@@ -1,3 +1,8 @@
 export enum routes {
- HOME = "/bookstore",
+ HOME = "/",
+ SIGN_IN = "sign-in",
+ SIGN_UP = "sign-up",
+ SEARCH = "search/:title/:page",
+ BOOK = "books/:id",
+ NOT_FOUND = "*",
 }
