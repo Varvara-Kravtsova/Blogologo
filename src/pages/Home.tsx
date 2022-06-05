@@ -1,14 +1,28 @@
-import { useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
-import { routes } from "../routes/routes";
-import { RootStore } from "../store/store";
+import { useEffect, useState } from "react";
+import { BookList } from "../components/BookList/BookList";
+import { bookApi } from "../services/bookService";
+import { INewBooksApi } from "../services/types";
+import { getBooks } from "../store/selectors/bookSelector";
+import { useAppSelector } from "../store/hooks/hooks";
 
 export const Home = () => {
- const { isAuth, email } = useSelector(({ user }: RootStore) => user);
+ const books = useAppSelector(getBooks);
 
- if (isAuth) {
-  return <div>{email}</div>;
- }
+ const [newBooks, setNewBooks] = useState<INewBooksApi>({
+  books: [],
+  error: "",
+  total: "",
+ });
 
- return <Navigate to={routes.SIGN_UP} />;
+ useEffect(() => {
+  bookApi.getNewBooks().then((books) => {
+   setNewBooks(books);
+  });
+ }, []);
+
+ return (
+  <>
+   <BookList books={newBooks.books} />
+  </>
+ );
 };

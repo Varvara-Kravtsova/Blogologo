@@ -1,13 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import App from "./App";
-import store from "./store/store";
-import "./firebase";
+import { App } from "./App";
+import { store } from "./store/store";
 
-const root = ReactDOM.createRoot(
- document.getElementById("root") as HTMLElement
-);
+const app = document.getElementById("root");
+if (!app) {
+ throw new Error("No root element found");
+}
+const root = createRoot(app);
 root.render(
  <React.StrictMode>
   <Provider store={store}>

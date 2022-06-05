@@ -1,8 +1,8 @@
-import { IBook } from "../../types";
+import { INewBookApi } from "../../services/types";
 import { StyledBookItem } from "./styles";
 
 interface IBookItemProps {
- book: IBook;
+ book: INewBookApi;
 }
 
 export const BookItem = ({ book }: IBookItemProps) => {
