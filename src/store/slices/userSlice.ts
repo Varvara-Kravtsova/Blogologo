@@ -32,7 +32,7 @@ const userSlice = createSlice({
    state.email = undefined;
   },
 
-  addFavotites: (state, { payload }: PayloadAction<IBook>) => {
+  addFavorites: (state, { payload }: PayloadAction<IBook>) => {
    state.favorites = [
     { ...payload },
     ...state.favorites.filter((item) => item.isbn13 !== payload.isbn13),
@@ -48,7 +48,7 @@ const userSlice = createSlice({
 });
 
 export const {
- addFavotites,
+ addFavorites,
  removeFavorite,
  unsetUser,
  setPassword,
