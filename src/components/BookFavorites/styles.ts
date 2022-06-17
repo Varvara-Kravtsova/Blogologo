@@ -31,7 +31,7 @@ const InfoContainer = styled.div`
 `;
 
 const FavoritesImg = styled.img`
- background: ${Colors.BLUE};
+ background: #ffe4e1;
  max-width: 226px;
  width: 100%;
  margin: 0 63px 20px;
