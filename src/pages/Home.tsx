@@ -16,7 +16,7 @@ export const Home = () => {
 
  return (
   <>
-   <Title>New Releases Books</Title>
+   <Title>NEW RELEASES BOOKS</Title>
    <BookList books={books}></BookList>
    <Subscribe />
   </>

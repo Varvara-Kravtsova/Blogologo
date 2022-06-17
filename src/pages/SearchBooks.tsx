@@ -20,7 +20,7 @@ export const SearchBooks = () => {
  return (
   <>
    <BackButton />
-   <Title> '{title}'' search results</Title>
+   <Title> '{title}' SEARCH RESULTS</Title>
    <BookList books={books ? books : []} />
    <Pagination />
   </>
