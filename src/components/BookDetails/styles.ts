@@ -33,7 +33,7 @@ const ImageContainer = styled.div`
  }
 `;
 
-const HeardContainer = styled.button`
+const HeartContainer = styled.button`
  position: absolute;
  right: 0;
  top: 0;
@@ -200,6 +200,7 @@ const IconsItem = styled.a`
 `;
 
 const IconFacebook = styled(Facebook)``;
+
 const IconTwitter = styled(Twitter)``;
 
 export {
@@ -228,4 +229,5 @@ export {
  IconFacebook,
  IconsItem,
  Icons,
+ HeartContainer,
 };

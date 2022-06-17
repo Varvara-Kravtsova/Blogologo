@@ -25,8 +25,14 @@ import {
  Icons,
  IconsItem,
  IconTwitter,
+ DetailsList,
+ HeartContainer,
 } from "./styles";
-import { IBookDetailsApi } from "../../types";
+import { IBook, IBookDetailsApi } from "../../types";
+import { useAppDispatch } from "../../store/hooks/hooks";
+import { addFavorites } from "../../store/slices/userSlice";
+import Subscribe from "../Subscribe/Subscribe";
+import { Heart } from "../Heart/Heart";
 
 interface IProps {
  book: IBookDetailsApi;
@@ -53,6 +59,12 @@ export const BookDetails = ({ book }: IProps) => {
   return stars;
  };
 
+ const dispatch = useAppDispatch();
+
+ const handleFavorites = (book: IBook) => {
+  dispatch(addFavorites(book));
+ };
+
  const [active, setActive] = useState<string>("description");
 
  const handleDescription = () => {
@@ -66,6 +78,9 @@ export const BookDetails = ({ book }: IProps) => {
   <>
    <StyledBook key={book.isbn13}>
     <ImageContainer>
+     <HeartContainer type="button" onClick={() => handleFavorites(book)}>
+      <Heart />
+     </HeartContainer>
      <BookImage src={book.image} alt={book.title} />
     </ImageContainer>
 
@@ -106,6 +121,25 @@ export const BookDetails = ({ book }: IProps) => {
      ))}
     </InfoContainer>
    </StyledBook>
+
+   <DetailsList id="details">
+    <Params>Authors</Params>
+    <Attribute>{book.authors}</Attribute>
+    <Params>Publisher</Params>
+    <Attribute>{book.publisher}</Attribute>
+    <Params>Language</Params>
+    <Attribute>{book.language}</Attribute>
+    <Params>Pages</Params>
+    <Attribute>{book.pages}</Attribute>
+    <Params>Year</Params>
+    <Attribute>{book.year}</Attribute>
+    <Params>ISBN 10</Params>
+    <Attribute>{book.isbn10}</Attribute>
+    <Params>ISBN 13</Params>
+    <Attribute>{book.isbn13}</Attribute>
+    <Params>URL </Params>
+    <Attribute>{book.url}</Attribute>
+   </DetailsList>
 
    <TabsContainer>
     <Tab isActive={active === "description"} onClick={handleDescription}>
