@@ -1,9 +1,8 @@
 import axios from "axios";
-import { IDetailsBookApi, INewBooksApi, ISearchBooksApi } from "./types";
+import { IBookDetailsApi, INewBooksApi, ISearchBooksApi } from "../types/index";
 
 class BookService {
- private readonly API_URL = process.env.REACT_APP_API_URL;
-
+ private readonly API_URL = "https://api.itbook.store/1.0/";
  private api = axios.create({
   baseURL: this.API_URL,
  });
@@ -12,10 +11,12 @@ class BookService {
   const { data } = await this.api.get<INewBooksApi>("/new");
   return data;
  }
- public async getBookDetails(isbn: string): Promise<IDetailsBookApi> {
-  const { data } = await this.api.get<IDetailsBookApi>(`/books/${isbn}`);
+
+ public async getBookDetails(isbn: string): Promise<IBookDetailsApi> {
+  const { data } = await this.api.get<IBookDetailsApi>(`/books/${isbn}`);
   return data;
  }
+
  public async getBooksBySearch(
   title: string,
   page: string
