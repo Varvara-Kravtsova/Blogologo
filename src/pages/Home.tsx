@@ -1,28 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { BookList } from "../components/BookList/BookList";
-import { bookApi } from "../services/bookService";
-import { INewBooksApi } from "../services/types";
-import { getBooks } from "../store/selectors/bookSelector";
-import { useAppSelector } from "../store/hooks/hooks";
+import Subscribe from "../components/Subscribe/Subscribe";
+import { Title } from "../components/Title/Title";
+import { useAppDispatch, useAppSelector } from "../store/hooks/hooks";
+import { getBooks } from "../store/selectors/bookSelectors";
+import { fetchBooks } from "../store/slices/bookSlice";
 
 export const Home = () => {
- const books = useAppSelector(getBooks);
-
- const [newBooks, setNewBooks] = useState<INewBooksApi>({
-  books: [],
-  error: "",
-  total: "",
- });
+ const dispatch = useAppDispatch();
+ const { books } = useAppSelector(getBooks);
 
  useEffect(() => {
-  bookApi.getNewBooks().then((books) => {
-   setNewBooks(books);
-  });
- }, []);
+  dispatch(fetchBooks());
+ }, [dispatch]);
 
  return (
   <>
-   <BookList books={newBooks.books} />
+   <Title>New Releases Books</Title>
+   <BookList books={books}></BookList>
+   <Subscribe />
   </>
  );
 };
