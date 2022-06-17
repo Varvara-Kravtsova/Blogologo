@@ -6,7 +6,7 @@ import { IBook } from "../../types";
 import {
  Container,
  InfoContainer,
- FavoritesImg,
+ FavoritesImage,
  FavoritesPrice,
  FavoritesSubtitle,
  FavoritesTitle,
@@ -30,7 +30,7 @@ export const BookFavorites = () => {
     return (
      <Container key={book.isbn13}>
       <StyledLink to={`/bookstore/books/${book.isbn13}`}>
-       <FavoritesImg src={book.image} alt={book.title} />
+       <FavoritesImage src={book.image} alt={book.title} />
        <InfoContainer>
         <FavoritesTitle>{book.title}</FavoritesTitle>
         <FavoritesSubtitle>{book.subtitle}</FavoritesSubtitle>

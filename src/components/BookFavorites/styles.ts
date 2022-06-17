@@ -30,11 +30,11 @@ const InfoContainer = styled.div`
  width: 100%;
 `;
 
-const FavoritesImg = styled.img`
+const FavoritesImage = styled.img`
  background: #ffe4e1;
- max-width: 226px;
+ max-width: 240px;
  width: 100%;
- margin: 0 63px 20px;
+ margin: 20px 65px;
  ${media.mobile} {
   margin: 0;
   max-width: none;
@@ -78,7 +78,7 @@ export {
  StyledFavoritesList,
  FavoritesPrice,
  FavoritesTitle,
- FavoritesImg,
+ FavoritesImage,
  StyledLink,
  InfoContainer,
  FavoritesSubtitle,
