@@ -55,7 +55,7 @@ export const StyledLink = styled(Link)`
 export const StyledImage = styled.img`
  max-width: 230px;
  width: 100%;
- margin: 0 auto 20px;
+ margin: 0 45px;
 `;
 
 export const StyledTitle = styled.h3`
