@@ -1,18 +1,26 @@
-import { INewBookApi } from "../../services/types";
-import { StyledLink, StyledBookItem } from "./styles";
+import { IBook } from "../../types/";
+import {
+ StyledImage,
+ StyledLink,
+ StyledPrice,
+ StyledSubtitle,
+ StyledTitle,
+ StyledBookItem,
+} from "./styles";
 
-interface IBookItem {
- book: INewBookApi;
+interface IBookItemProps {
+ book: IBook;
 }
-
-export const BookItem = ({ book }: IBookItem) => {
+export const BookItem = ({ book }: IBookItemProps) => {
  return (
-  <StyledBookItem whileHover={{ y: 10 }}>
+  <StyledBookItem key={book.isbn13}>
    <StyledLink to={`/bookstore/books/${book.isbn13}`}>
-    <img src={book.image} alt={book.title} />
-    <h2>{book.title}</h2>
-    <p> {book.subtitle}</p>
-    <p>{book.price === "$0.00" ? "Free for you" : book.price}</p>
+    <StyledImage src={book.image} alt={book.title} />
+    <StyledTitle>{book.title ? book.title : "No title"}</StyledTitle>
+    <StyledSubtitle>
+     {book.subtitle ? book.subtitle : "No subtitle"}
+    </StyledSubtitle>
+    <StyledPrice>{book.price === "$0.00" ? "Free" : book.price}</StyledPrice>
    </StyledLink>
   </StyledBookItem>
  );

@@ -1,11 +1,19 @@
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "../../assets/icons";
 import { StyledBackButton } from "./styles";
 
-interface IBackButton {
- onClick: () => void;
-}
+export const BackButton = () => {
+ const navigate = useNavigate();
 
-export const BackButton = ({ onClick }: IBackButton) => {
- return <StyledBackButton type="button" onClick={onClick} />;
+ const handleBack = () => {
+  navigate(-1);
+ };
+
+ return (
+  <StyledBackButton onClick={handleBack}>
+   <ArrowLeft />
+  </StyledBackButton>
+ );
 };
 
 export default BackButton;

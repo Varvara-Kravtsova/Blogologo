@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import { Container, StyledApp } from "./styles";
+import { StyledApp, StyledContainer } from "./styles";
 
 const MainTemplate = () => {
  return (
   <StyledApp>
-   <Container>
+   <StyledContainer>
     <Header />
     <Outlet />
     <Footer />
-   </Container>
+   </StyledContainer>
   </StyledApp>
  );
 };

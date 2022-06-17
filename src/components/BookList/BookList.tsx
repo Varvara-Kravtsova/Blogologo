@@ -1,17 +1,18 @@
-import { INewBookApi } from "../../services/types";
 import { BookItem } from "../BookItem/BookItem";
 import { StyledBookList } from "./styles";
+import { bookApi } from "../../services/bookService";
+import { IBook } from "../../types";
 
 interface IBookList {
- books: INewBookApi[];
+ books: IBook[];
 }
 
 export const BookList = ({ books }: IBookList) => {
  return (
   <StyledBookList>
-   {books.map((book) => (
-    <BookItem key={book.isbn13} book={book} />
-   ))}
+   {books.map((book) => {
+    return <BookItem key={book.isbn13} book={book} />;
+   })}
   </StyledBookList>
  );
 };
