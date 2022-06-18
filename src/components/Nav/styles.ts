@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Circle, Heart, Cart, User } from "../../assets/icons";
+import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
 const StyledNav = styled.div`
@@ -23,6 +24,13 @@ const StyledLink = styled(Link)`
  justify-content: center;
  width: 56px;
  height: 56px;
+ border-bottom: 2px solid transparent;
+ &:hover {
+  border-bottom: 2px solid ${Colors.PRIMARY};
+ }
+ &:active {
+  border-bottom: 2px solid #bebebe;
+ }
  ${media.tablet} {
   width: 36px;
   height: 36px;

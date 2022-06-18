@@ -27,6 +27,7 @@ export const Nav = () => {
      <></>
     )}
    </StyledLink>
+
    <StyledLink to={routes.CART}>
     <IconShopping />
     {cards.length !== 0 ? (
@@ -37,6 +38,7 @@ export const Nav = () => {
      <></>
     )}
    </StyledLink>
+
    <StyledLink to={routes.ACCOUNT}>
     <IconUser />
    </StyledLink>
