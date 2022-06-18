@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft } from "../../assets/icons";
+import { ArrowBack } from "../../assets/icons";
 import { StyledBackButton } from "./styles";
 
 export const BackButton = () => {
@@ -11,7 +11,7 @@ export const BackButton = () => {
 
  return (
   <StyledBackButton onClick={handleBack}>
-   <ArrowLeft />
+   <ArrowBack />
   </StyledBackButton>
  );
 };
