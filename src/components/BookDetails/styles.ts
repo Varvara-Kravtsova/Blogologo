@@ -17,7 +17,7 @@ const StyledBook = styled.div`
  }
 `;
 
-const ImageContainer = styled.div`
+const ImageBlock = styled.div`
  max-width: 544px;
  width: 100%;
  padding: 61px 0px;
@@ -45,7 +45,7 @@ const BookImage = styled.img`
  margin: 0 auto;
 `;
 
-const InfoContainer = styled.div`
+const InfoBlock = styled.div`
  max-width: 448px;
  width: 100%;
  border-top: 1px solid ${Colors.GRAY};
@@ -130,7 +130,7 @@ const StyledLink = styled(Link)`
  color: ${Colors.PRIMARY};
 `;
 
-const TabsContainer = styled.div`
+const TabsBlock = styled.div`
  display: grid;
  column-gap: 20px;
  grid-template-columns: repeat(2, 160px);
@@ -186,7 +186,7 @@ const TabsPanel = styled.div`
  }
 `;
 
-const Icons = styled.div`
+const IconsBlock = styled.div`
  display: grid;
  align-items: center;
  grid-template-columns: repeat(2, 30px);
@@ -197,6 +197,13 @@ const Icons = styled.div`
 const IconsItem = styled.a`
  margin: 0 auto;
  padding: 10px;
+ border-bottom: 2px solid transparent;
+ &:hover {
+  border-bottom: 2px solid ${Colors.PRIMARY};
+ }
+ &:active {
+  border-bottom: 2px solid #bebebe;
+ }
 `;
 
 const IconFacebook = styled(Facebook)``;
@@ -205,8 +212,8 @@ const IconTwitter = styled(Twitter)``;
 
 export {
  StyledBook,
- ImageContainer,
- InfoContainer,
+ ImageBlock,
+ InfoBlock,
  BookImage,
  RateContainer,
  BookPrice,
@@ -218,7 +225,7 @@ export {
  DetailsButton,
  StyledDownButton,
  StyledLink,
- TabsContainer,
+ TabsBlock,
  Tab,
  Description,
  DetailsList,
@@ -228,6 +235,6 @@ export {
  IconTwitter,
  IconFacebook,
  IconsItem,
- Icons,
+ IconsBlock,
  HeartContainer,
 };

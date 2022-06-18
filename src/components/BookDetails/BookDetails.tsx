@@ -3,10 +3,9 @@ import { FullStar, EmptyStar, ArrowDown } from "../../assets/icons";
 import { v4 as uuidv4 } from "uuid";
 import {
  StyledBook,
- ImageContainer,
+ ImageBlock,
  BookImage,
- InfoContainer,
- RateContainer,
+ InfoBlock,
  BookPrice,
  BookRating,
  InfoList,
@@ -17,21 +16,20 @@ import {
  StyledDownButton,
  StyledLink,
  Tab,
- TabsContainer,
+ TabsBlock,
  Description,
  PreviewButton,
  TabsPanel,
  IconFacebook,
- Icons,
+ IconsBlock,
  IconsItem,
  IconTwitter,
- DetailsList,
  HeartContainer,
+ RateContainer,
 } from "./styles";
 import { IBook, IBookDetailsApi } from "../../types";
 import { useAppDispatch } from "../../store/hooks/hooks";
 import { addFavorites } from "../../store/slices/userSlice";
-import Subscribe from "../Subscribe/Subscribe";
 import { Heart } from "../Heart/Heart";
 
 interface IProps {
@@ -77,14 +75,14 @@ export const BookDetails = ({ book }: IProps) => {
  return (
   <>
    <StyledBook key={book.isbn13}>
-    <ImageContainer>
+    <ImageBlock>
      <HeartContainer type="button" onClick={() => handleFavorites(book)}>
       <Heart />
      </HeartContainer>
      <BookImage src={book.image} alt={book.title} />
-    </ImageContainer>
+    </ImageBlock>
 
-    <InfoContainer>
+    <InfoBlock>
      <RateContainer>
       <BookPrice>
        {book.price === "$0.00" ? "Not Available" : book.price}
@@ -106,7 +104,7 @@ export const BookDetails = ({ book }: IProps) => {
      </InfoList>
 
      <DetailsButton>
-      <StyledLink to="details" duration={1000} smooth={true}>
+      <StyledLink to="details" duration={800} smooth={true}>
        More detailse
        <StyledDownButton>
         <ArrowDown />
@@ -119,36 +117,17 @@ export const BookDetails = ({ book }: IProps) => {
        Preview book
       </PreviewButton>
      ))}
-    </InfoContainer>
+    </InfoBlock>
    </StyledBook>
 
-   <DetailsList id="details">
-    <Params>Authors</Params>
-    <Attribute>{book.authors}</Attribute>
-    <Params>Publisher</Params>
-    <Attribute>{book.publisher}</Attribute>
-    <Params>Language</Params>
-    <Attribute>{book.language}</Attribute>
-    <Params>Pages</Params>
-    <Attribute>{book.pages}</Attribute>
-    <Params>Year</Params>
-    <Attribute>{book.year}</Attribute>
-    <Params>ISBN 10</Params>
-    <Attribute>{book.isbn10}</Attribute>
-    <Params>ISBN 13</Params>
-    <Attribute>{book.isbn13}</Attribute>
-    <Params>URL </Params>
-    <Attribute>{book.url}</Attribute>
-   </DetailsList>
-
-   <TabsContainer>
+   <TabsBlock id="details">
     <Tab isActive={active === "description"} onClick={handleDescription}>
      Description
     </Tab>
     <Tab isActive={active === "authors"} onClick={handleAuthors}>
      Authors
     </Tab>
-   </TabsContainer>
+   </TabsBlock>
    <TabsPanel>
     {active === "description" ? (
      <Description>{book.desc}</Description>
@@ -159,14 +138,14 @@ export const BookDetails = ({ book }: IProps) => {
     )}
    </TabsPanel>
 
-   <Icons>
+   <IconsBlock>
     <IconsItem href="https://facebook.com">
      <IconFacebook id="facebook" />
     </IconsItem>
     <IconsItem href="https://twitter.com">
      <IconTwitter id="twitter" />
     </IconsItem>
-   </Icons>
+   </IconsBlock>
   </>
  );
 };
