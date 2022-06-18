@@ -8,7 +8,7 @@ import {
  Pages,
  StyledArrowLeft,
  StyledArrowRight,
- StyledPaginationButton,
+ PaginationButton,
  StyledPaginationContainer,
 } from "./styles";
 
@@ -41,10 +41,10 @@ export const Pagination = () => {
 
  return (
   <StyledPaginationContainer>
-   <StyledPaginationButton type="button" onClick={handlePrevPage}>
+   <PaginationButton type="button" onClick={handlePrevPage}>
     <StyledArrowLeft />
     Prev
-   </StyledPaginationButton>
+   </PaginationButton>
 
    <Pages>
     <PageRight onClick={handlePrevButton}>
@@ -55,10 +55,10 @@ export const Pagination = () => {
      {total && +page < Math.ceil(+total) / 10 ? +page + 1 : +page + 1}
     </PageRight>
    </Pages>
-   <StyledPaginationButton type="button" onClick={handleNextPage}>
+   <PaginationButton type="button" onClick={handleNextPage}>
     Next
     <StyledArrowRight />
-   </StyledPaginationButton>
+   </PaginationButton>
   </StyledPaginationContainer>
  );
 };

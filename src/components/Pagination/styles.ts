@@ -6,7 +6,7 @@ export const StyledPaginationContainer = styled.div`
  display: flex;
  justify-content: space-between;
 `;
-export const StyledPaginationButton = styled.button`
+export const PaginationButton = styled.button`
  border: none;
  background-color: ${Colors.WHITE};
  color: ${Colors.PRIMARY};
