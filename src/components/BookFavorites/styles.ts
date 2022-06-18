@@ -23,7 +23,7 @@ const StyledLink = styled(Link)`
  }
 `;
 
-const InfoContainer = styled.div`
+const InfoBlock = styled.div`
  display: flex;
  flex-direction: column;
  max-width: 450px;
@@ -80,7 +80,7 @@ export {
  FavoritesTitle,
  FavoritesImage,
  StyledLink,
- InfoContainer,
+ InfoBlock,
  FavoritesSubtitle,
  Container,
  RemoveContainer,

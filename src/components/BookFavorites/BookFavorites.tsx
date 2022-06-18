@@ -2,10 +2,10 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getUserInfo } from "../../store/selectors/userSelectors";
 import { removeFavorite } from "../../store/slices/userSlice";
 import { IBook } from "../../types";
-// import { HeartRemove } from "../HeartRemove/HeartRemove";
+import { HeartRemove } from "../HeartRemove/HeartRemove";
 import {
  Container,
- InfoContainer,
+ InfoBlock,
  FavoritesImage,
  FavoritesPrice,
  FavoritesSubtitle,
@@ -20,9 +20,9 @@ export const BookFavorites = () => {
 
  const dispatch = useAppDispatch();
 
- //  const handleRemoveFavorite = (book: IBook) => {
- //   dispatch(removeFavorite(book));
- //  };
+ const handleRemoveFavorite = (book: IBook) => {
+  dispatch(removeFavorite(book));
+ };
 
  return (
   <StyledFavoritesList>
@@ -31,17 +31,18 @@ export const BookFavorites = () => {
      <Container key={book.isbn13}>
       <StyledLink to={`/bookstore/books/${book.isbn13}`}>
        <FavoritesImage src={book.image} alt={book.title} />
-       <InfoContainer>
+       <InfoBlock>
         <FavoritesTitle>{book.title}</FavoritesTitle>
         <FavoritesSubtitle>{book.subtitle}</FavoritesSubtitle>
         <FavoritesPrice>
          {book.price === "$0.00" ? "Not Available" : book.price}
         </FavoritesPrice>
-       </InfoContainer>
+       </InfoBlock>
       </StyledLink>
-      {/* <RemoveContainer type="button" onClick={() => handleRemoveFavorite(book)}>
+
+      <RemoveContainer type="button" onClick={() => handleRemoveFavorite(book)}>
        <HeartRemove />
-      </RemoveContainer> */}
+      </RemoveContainer>
      </Container>
     );
    })}
