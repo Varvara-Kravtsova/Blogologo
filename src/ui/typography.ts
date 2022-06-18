@@ -61,7 +61,12 @@ const button = css`
  background-color: ${Colors.PRIMARY};
  &:hover,
  :active {
-  background-color: ${Colors.PRIMARY_SECOND};
+  background-image: linear-gradient(to right, #363636, #696969, #363636);
+  box-shadow: 0 2px 7px 0 rgba(45, 54, 65, 0.75);
+  background-position: 100% 0;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
  }
  ${media.tablet} {
   font-size: 18px;
@@ -84,7 +89,7 @@ const tab = css`
   border-bottom: 2px solid ${Colors.PRIMARY};
  }
  &:active {
-  border-bottom: 2px solid ${Colors.RED};
+  border-bottom: 2px solid #bebebe;
  }
 `;
 
