@@ -62,7 +62,7 @@ const button = css`
  &:hover,
  :active {
   background-image: linear-gradient(to right, #363636, #696969, #363636);
-  box-shadow: 0 2px 7px 0 rgba(45, 54, 65, 0.75);
+  box-shadow: 0 2px 8px 0 rgba(45, 54, 65, 0.75);
   background-position: 100% 0;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
