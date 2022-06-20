@@ -1,13 +1,13 @@
 import { Container, Logo, StyledHeader } from "./styles";
 import { Link } from "react-router-dom";
-import { Form } from "../FormSearch/Form";
+import { Form } from "../SearchForm/SearchForm";
 import { Nav } from "../Nav/Nav";
 
 const Header = () => {
  return (
   <StyledHeader>
    <Container>
-    <Link to={"/bookstore"}>
+    <Link to={"/"}>
      <Logo />
     </Link>
     <Form />
