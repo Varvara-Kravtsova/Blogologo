@@ -14,7 +14,7 @@ import {
 
 export const Nav = () => {
  const { favorites } = useAppSelector(getUserInfo);
- const { cards } = useAppSelector(getCartInfo);
+ const { cart } = useAppSelector(getCartInfo);
  return (
   <StyledNav>
    <StyledLink to={routes.FAVORITES}>
@@ -30,7 +30,7 @@ export const Nav = () => {
 
    <StyledLink to={routes.CART}>
     <IconShopping />
-    {cards.length !== 0 ? (
+    {cart.length !== 0 ? (
      <StyledCartCircle>
       <StyledCircle />
      </StyledCartCircle>

@@ -10,7 +10,6 @@ export const StyledUser = styled.form`
 
 export const Subtitle = styled.h3`
  margin-bottom: 25px;
- //margin-left: 8px;
  text-align: start;
  ${typography.H3}
 `;
@@ -40,7 +39,7 @@ export const Title = styled.p`
 `;
 
 export const Input = styled.input`
- max-width: 544px;
+ max-width: 549px;
  width: 100%;
  margin-bottom: 40px;
  ${typography.input}

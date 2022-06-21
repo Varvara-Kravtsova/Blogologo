@@ -6,7 +6,6 @@ import { typography } from "../../ui/typography";
 const StyledFooter = styled.footer`
  max-width: 1920px;
  width: 100%;
- padding: 0 16px;
  margin: 0 auto;
 `;
 

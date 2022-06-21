@@ -8,10 +8,10 @@ import {
  StyledBookItem,
 } from "./styles";
 
-interface IBookItemProps {
+interface IBookItem {
  book: IBook;
 }
-export const BookItem = ({ book }: IBookItemProps) => {
+export const BookItem = ({ book }: IBookItem) => {
  return (
   <StyledBookItem key={book.isbn13}>
    <StyledLink to={`/bookstore/books/${book.isbn13}`}>

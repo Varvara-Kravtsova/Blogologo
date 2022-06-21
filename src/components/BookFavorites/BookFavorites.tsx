@@ -17,7 +17,6 @@ import {
 
 export const BookFavorites = () => {
  const { favorites } = useAppSelector(getUserInfo);
-
  const dispatch = useAppDispatch();
 
  const handleRemoveFavorite = (book: IBook) => {

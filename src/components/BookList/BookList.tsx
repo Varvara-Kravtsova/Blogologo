@@ -1,6 +1,5 @@
 import { BookItem } from "../BookItem/BookItem";
 import { StyledBookList } from "./styles";
-import { bookApi } from "../../services/bookService";
 import { IBook } from "../../types";
 
 interface IBookList {
