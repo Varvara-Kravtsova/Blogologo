@@ -14,7 +14,7 @@ export const AppRouter = () => {
  return (
   <Routes>
    <Route path={routes.HOME} element={<MainTemplate />}>
-    <Route index element={<Home />} />
+    <Route path={routes.HOME} element={<Home />} />
     <Route path={routes.DETAILS_BOOK} element={<DetailsBook />} />
     <Route path={routes.SEARCH} element={<SearchBooks />} />
     <Route path={routes.FAVORITES} element={<FavoritesBooks />} />
