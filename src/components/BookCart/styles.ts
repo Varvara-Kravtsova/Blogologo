@@ -123,7 +123,7 @@ const TotalContainer = styled.div`
 const TotalPrice = styled.p`
  ${typography.H3};
  font-size: 35px;
- padding-left: 50px;
+ padding-left: 30px;
 `;
 
 export {
