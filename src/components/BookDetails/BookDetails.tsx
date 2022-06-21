@@ -31,6 +31,7 @@ import {
  IconTwitter,
  HeartContainer,
  RateContainer,
+ DetailsList,
 } from "./styles";
 
 interface IProps {
@@ -40,7 +41,7 @@ interface IProps {
 export const BookDetails = ({ book }: IProps) => {
  useEffect(() => {
   window.scrollTo(0, 0);
- });
+ }, []);
 
  const previews = book.pdf ? Object.values(book.pdf) : [];
 
@@ -154,6 +155,25 @@ export const BookDetails = ({ book }: IProps) => {
      <IconTwitter id="twitter" />
     </IconsItem>
    </IconsBlock>
+
+   <DetailsList id="details">
+    <Params>Authors</Params>
+    <Attribute>{book.authors}</Attribute>
+    <Params>Publisher</Params>
+    <Attribute>{book.publisher}</Attribute>
+    <Params>Language</Params>
+    <Attribute>{book.language}</Attribute>
+    <Params>Pages</Params>
+    <Attribute>{book.pages}</Attribute>
+    <Params>Year</Params>
+    <Attribute>{book.year}</Attribute>
+    <Params>ISBN 10</Params>
+    <Attribute>{book.isbn10}</Attribute>
+    <Params>ISBN 13</Params>
+    <Attribute>{book.isbn13}</Attribute>
+    <Params>URL </Params>
+    <Attribute>{book.url}</Attribute>
+   </DetailsList>
   </>
  );
 };

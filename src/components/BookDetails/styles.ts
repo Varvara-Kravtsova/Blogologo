@@ -160,7 +160,8 @@ const DetailsList = styled.div`
  grid-template-columns: 150px 150px;
  column-gap: 90px;
  row-gap: 15px;
- margin-bottom: 30px;
+ padding-top: 40px;
+ border-top: 1px solid rgb(231, 231, 231);
  ${media.mobile} {
   column-gap: 0;
  }
@@ -180,7 +181,7 @@ const TabsPanel = styled.div`
  min-height: 70px;
  ${typography.B1}
  color: ${Colors.PRIMARY};
- margin-bottom: 48px;
+ margin-bottom: 40px;
  ${media.mobile} {
   min-height: 193px;
  }
@@ -191,6 +192,7 @@ const IconsBlock = styled.div`
  align-items: center;
  grid-template-columns: repeat(2, 30px);
  gap: 10px;
+ margin-bottom: 40px;
 `;
 
 const IconsItem = styled.a`
