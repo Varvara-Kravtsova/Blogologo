@@ -5,7 +5,9 @@ import { Colors } from "../../ui/colors";
 export const StyledPaginationContainer = styled.div`
  display: flex;
  justify-content: space-between;
+ margin-bottom: 28px;
 `;
+
 export const PaginationButton = styled.button`
  border: none;
  background-color: ${Colors.WHITE};
@@ -15,9 +17,11 @@ export const PaginationButton = styled.button`
  line-height: 24px;
  cursor: pointer;
 `;
+
 export const StyledArrowLeft = styled(ArrowLeft)`
  margin-right: 12px;
 `;
+
 export const StyledArrowRight = styled(ArrowRight)`
  margin-left: 12px;
 `;
@@ -36,6 +40,7 @@ export const Page = styled.button`
  border: ${Colors.WHITE};
  cursor: pointer;
 `;
+
 export const PageRight = styled.button`
  width: 30px;
  height: 30px;
@@ -47,6 +52,5 @@ export const PageRight = styled.button`
  border: ${Colors.WHITE};
  cursor: pointer;
 `;
-export const CurrentPage = styled(Page)`
- /* border: 1px solid rgb(13, 12, 29); */
-`;
+
+export const CurrentPage = styled(Page)``;

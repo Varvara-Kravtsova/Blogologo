@@ -20,6 +20,7 @@ export const Pagination = () => {
  const handleNextPage = () => {
   navigate(`/bookstore/search/${title}/${Number(page) + 1}`);
  };
+
  const handlePrevPage = () => {
   if (Number(page) === 1) {
    return;
@@ -55,6 +56,7 @@ export const Pagination = () => {
      {total && +page < Math.ceil(+total) / 10 ? +page + 1 : +page + 1}
     </PageRight>
    </Pages>
+
    <PaginationButton type="button" onClick={handleNextPage}>
     Next
     <StyledArrowRight />
