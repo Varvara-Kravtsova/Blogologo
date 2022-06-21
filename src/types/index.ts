@@ -75,30 +75,6 @@ export interface IFavorites {
  favorites: IBook[];
 }
 
-export interface ICarts {
- cards: IBookCartApi[];
- total: number;
- isLoading: boolean;
-}
-
-export interface ICart {
- image: string;
- title: string;
- authors: string;
- year: string;
- price: string;
- isbn13: string;
- quantity: number;
- totalPrice: string;
-}
-
-export interface ICartPage {
- results: ICart[];
- vat: number;
- sumTotal: number;
- total: number;
-}
-
 export interface ICartInfo {
  image: string;
  isbn13: string;
@@ -112,8 +88,26 @@ export interface ICartInfo {
  authors: string;
 }
 
-export interface IBookCartApi extends IBookDetailsApi {
+export interface IBookCartApi extends ICartInfo {
  amount: number;
+}
+
+export interface ICarts {
+ cart: IBookCartApi[];
+ total: number;
+ isLoading: boolean;
+}
+
+// export interface ICart {
+//  cart: IBookCartApi[];
+//  total: number;
+// }
+
+export interface ICartPage {
+ results: ICarts[];
+ vat: number;
+ sumTotal: number;
+ total: number;
 }
 
 export interface IArguments {
