@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IBookCartApi, IBookDetailsApi, ICarts } from "../../types";
 
 const initialState: ICarts = {
- cards: [],
+ cart: [],
  total: 0,
  isLoading: true,
 };
@@ -12,29 +12,29 @@ const cardsReducer = createSlice({
  initialState,
  reducers: {
   addCart: (state, { payload }: PayloadAction<IBookCartApi>) => {
-   state.cards = [
+   state.cart = [
     { ...payload },
-    ...state.cards.filter((item) => item.isbn13 !== payload.isbn13),
+    ...state.cart.filter((item) => item.isbn13 !== payload.isbn13),
    ];
   },
 
   removeCart: (state, { payload }: PayloadAction<IBookDetailsApi>) => {
-   state.cards = state.cards.filter((item) => item.isbn13 !== payload.isbn13);
+   state.cart = state.cart.filter((item) => item.isbn13 !== payload.isbn13);
   },
 
   increaseAmount: (state, { payload }: PayloadAction<IBookCartApi>) => {
-   const cards = state.cards.find((item) => item.isbn13 === payload.isbn13);
+   const cart = state.cart.find((item) => item.isbn13 === payload.isbn13);
 
-   if (cards) {
-    cards.amount = cards.amount + 1;
+   if (cart) {
+    cart.amount = cart.amount + 1;
    }
   },
 
   decreaseAmount: (state, { payload }: PayloadAction<IBookCartApi>) => {
-   const cards = state.cards.find((item) => item.isbn13 === payload.isbn13);
+   const cart = state.cart.find((item) => item.isbn13 === payload.isbn13);
 
-   if (cards) {
-    cards.amount = cards.amount - 1;
+   if (cart) {
+    cart.amount = cart.amount - 1;
    }
   },
  },
