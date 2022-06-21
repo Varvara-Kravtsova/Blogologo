@@ -1,6 +1,11 @@
 import { ReactNode, useEffect, useState } from "react";
 import { FullStar, EmptyStar, ArrowDown } from "../../assets/icons";
 import { v4 as uuidv4 } from "uuid";
+import { IBook, IBookDetailsApi } from "../../types";
+import { useAppDispatch } from "../../store/hooks/hooks";
+import { addFavorites } from "../../store/slices/userSlice";
+import { Heart } from "../Heart/Heart";
+import { addCart } from "../../store/slices/cartSlice";
 import {
  StyledBook,
  ImageBlock,
@@ -27,10 +32,6 @@ import {
  HeartContainer,
  RateContainer,
 } from "./styles";
-import { IBook, IBookDetailsApi } from "../../types";
-import { useAppDispatch } from "../../store/hooks/hooks";
-import { addFavorites } from "../../store/slices/userSlice";
-import { Heart } from "../Heart/Heart";
 
 interface IProps {
  book: IBookDetailsApi;
@@ -63,11 +64,16 @@ export const BookDetails = ({ book }: IProps) => {
   dispatch(addFavorites(book));
  };
 
+ const handleCart = (book: IBookDetailsApi) => {
+  dispatch(addCart({ ...book, amount: 1 }));
+ };
+
  const [active, setActive] = useState<string>("description");
 
  const handleDescription = () => {
   setActive("description");
  };
+
  const handleAuthors = () => {
   setActive("authors");
  };
@@ -111,7 +117,9 @@ export const BookDetails = ({ book }: IProps) => {
        </StyledDownButton>
       </StyledLink>
      </DetailsButton>
-     <AddButton type="button">Add to cart</AddButton>
+     <AddButton type="button" onClick={() => handleCart(book)}>
+      Add to cart
+     </AddButton>
      {previews.map((preview) => (
       <PreviewButton href={preview} key={book.isbn13}>
        Preview book

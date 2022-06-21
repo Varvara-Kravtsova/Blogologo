@@ -191,7 +191,6 @@ const IconsBlock = styled.div`
  align-items: center;
  grid-template-columns: repeat(2, 30px);
  gap: 10px;
- margin-bottom: 20px;
 `;
 
 const IconsItem = styled.a`
