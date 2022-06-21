@@ -5,7 +5,6 @@ import { Colors } from "../../ui/colors";
 const StyledHeader = styled.header`
  max-width: 1920px;
  width: 100%;
- padding: 0 16px;
  margin: 0 auto 72px;
 `;
 
