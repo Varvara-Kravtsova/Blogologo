@@ -13,6 +13,9 @@ import { ReactComponent as Twitter } from "./twitter.svg";
 import { ReactComponent as Heart } from "./heart.svg";
 import { ReactComponent as Circle } from "./circle.svg";
 import { ReactComponent as Search } from "./search.svg";
+import { ReactComponent as Minus } from "./minus.svg";
+import { ReactComponent as Plus } from "./plus.svg";
+import { ReactComponent as Delete } from "./cancel.svg";
 
 export {
  ArrowBack,
@@ -30,4 +33,7 @@ export {
  Heart,
  Circle,
  Search,
+ Minus,
+ Plus,
+ Delete,
 };
