@@ -5,13 +5,15 @@ import { StyledApp, StyledContainer } from "./styles";
 
 const MainTemplate = () => {
  return (
-  <StyledApp>
-   <StyledContainer>
-    <Header />
-    <Outlet />
-    <Footer />
-   </StyledContainer>
-  </StyledApp>
+  <>
+   <StyledApp>
+    <StyledContainer>
+     <Header />
+     <Outlet />
+     <Footer />
+    </StyledContainer>
+   </StyledApp>
+  </>
  );
 };
 
