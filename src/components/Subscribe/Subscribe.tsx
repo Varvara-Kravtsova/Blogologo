@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import {
  StyledSubscribe,
  SubscribeTitle,
@@ -9,7 +10,12 @@ import {
  SubscribeBlock,
 } from "./styles";
 
+type InputValue = {
+ email: string;
+};
+
 const Subscribe = () => {
+ const { register } = useForm<InputValue>();
  return (
   <StyledSubscribe>
    <Container>
@@ -20,7 +26,10 @@ const Subscribe = () => {
       offers and more.
      </SubscribeSubtitle>
      <SubscribeForm>
-      <SubscribeInput placeholder="Your email" />
+      <SubscribeInput
+       placeholder="Your email"
+       {...register("email", { required: true })}
+      />
       <SubscribeButton>Subscribe</SubscribeButton>
      </SubscribeForm>
     </SubscribeBlock>

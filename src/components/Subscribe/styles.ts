@@ -6,7 +6,7 @@ import { typography } from "../../ui/typography";
 const StyledSubscribe = styled.section`
  max-width: 1920px;
  width: 100%;
- margin: 0 auto 72px;
+ margin: 72px auto 72px;
  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
   rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
   rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
