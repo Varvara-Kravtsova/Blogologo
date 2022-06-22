@@ -4,15 +4,16 @@
 <h1 align="center">
     Bookstore
      </h1>
-    <h2 align="center">
+    <h3 align="center">
     <a href="https://varvara-kravtsova.github.io/Bookstore/">Live Demo</a>
-     </h2>
+     </h3>
 </div>
 
 ---
 
-## About The Project
+### About The Project
 
+<br/>
 <img src="bookstore.png" alt="bookstore" width="100%"><br/>
 
 Bookstore is a platform for buying books, where you can get information about the book, add the book you like to your favorites and to the cart. <br/> You can also search for books by title, subtitle, author and ISBN.
@@ -21,7 +22,7 @@ Bookstore is a platform for buying books, where you can get information about th
 
 ---
 
-## Usage
+### Usage
 
 User ability:
 
@@ -44,7 +45,7 @@ Search by:
 
 ---
 
-## Installation
+### Installation
 
 1. Get a free API at [IT Bookstore API](https://api.itbook.store/)
 2. Register on [Firebase](https://firebase.google.com/), create your data base and copy Firebase configuration
@@ -72,7 +73,7 @@ Search by:
 
 ---
 
-## Tools and packages
+### Tools and packages
 
 - [React](https://reactjs.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
