@@ -1,9 +1,9 @@
 <div id="top"></div>
 <br />
 <div align="center">
-<h2 align="center">
+<h1 align="center">
     Bookstore
-     </h2>
+     </h1>
     <h3 align="center">
     <a href="https://varvara-kravtsova.github.io/Bookstore/">Live Demo</a>
      </h3>
@@ -11,12 +11,11 @@
 
 ---
 
-###About The Project
+### About The Project
 
 <img src="bookstore.png" alt="bookstore" width="100%"><br/>
 
-Bookstore is a platform for buying books, where you can get information about the book, add the book you like to your favorites and to the cart.
-You can also search for books by title, subtitle, author and ISBN.
+Bookstore is a platform for buying books, where you can get information about the book, add the book you like to your favorites and to the cart. <br/> You can also search for books by title, subtitle, author and ISBN.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
