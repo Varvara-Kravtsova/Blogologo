@@ -28,6 +28,7 @@
     "typescript": "^4.7.2",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://varvara-kravtsova.github.io/Bookstore/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -28,7 +28,7 @@ export const BookFavorites = () => {
    {favorites.map((book) => {
     return (
      <Container key={book.isbn13}>
-      <StyledLink to={`/books/${book.isbn13}`}>
+      <StyledLink to={`/Bookstore/books/${book.isbn13}`}>
        <FavoritesImage src={book.image} alt={book.title} />
        <InfoBlock>
         <FavoritesTitle>{book.title}</FavoritesTitle>

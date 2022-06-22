@@ -8,7 +8,7 @@ export const Form = () => {
  const navigate = useNavigate();
 
  const onSubmit = (data: any) => {
-  navigate(`/search/${data.title}/1`);
+  navigate(`/Bookstore/search/${data.title}/1`);
  };
 
  return (

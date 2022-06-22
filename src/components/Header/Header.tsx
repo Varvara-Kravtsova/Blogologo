@@ -7,7 +7,7 @@ const Header = () => {
  return (
   <StyledHeader>
    <Container>
-    <Link to={"/"}>
+    <Link to={"/Bookstore"}>
      <Logo />
     </Link>
     <Form />

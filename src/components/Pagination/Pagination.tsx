@@ -18,24 +18,24 @@ export const Pagination = () => {
  const { total } = useAppSelector(getBooks);
 
  const handleNextPage = () => {
-  navigate(`/bookstore/search/${title}/${Number(page) + 1}`);
+  navigate(`/Bookstore/search/${title}/${Number(page) + 1}`);
  };
 
  const handlePrevPage = () => {
   if (Number(page) === 1) {
    return;
   }
-  navigate(`/bookstore/search/${title}/${Number(page) - 1}`);
+  navigate(`/Bookstore/search/${title}/${Number(page) - 1}`);
  };
 
  const handleNextButton = () => {
-  navigate(`/bookstore/search/${title}/${Number(page) + 1}`);
+  navigate(`/Bookstore/search/${title}/${Number(page) + 1}`);
   window.scrollTo(0, 0);
  };
 
  const handlePrevButton = () => {
   if (+page > 1) {
-   navigate(`/bookstore/search/${title}/${Number(page) - 1}`);
+   navigate(`/Bookstore/search/${title}/${Number(page) - 1}`);
    window.scrollTo(0, 0);
   }
  };

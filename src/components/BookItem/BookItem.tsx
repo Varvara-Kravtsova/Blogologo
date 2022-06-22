@@ -14,7 +14,7 @@ interface IBookItem {
 export const BookItem = ({ book }: IBookItem) => {
  return (
   <StyledBookItem key={book.isbn13}>
-   <StyledLink to={`/books/${book.isbn13}`}>
+   <StyledLink to={`/Bookstore/books/${book.isbn13}`}>
     <StyledImage src={book.image} alt={book.title} />
     <StyledTitle>{book.title ? book.title : "No title"}</StyledTitle>
     <StyledSubtitle>
