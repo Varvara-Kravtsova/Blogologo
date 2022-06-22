@@ -61,7 +61,7 @@ export const BookCart = () => {
      return (
       <Container key={book.isbn13}>
        <BookContainer>
-        <StyledLink to={`/bookstore/books/${book.isbn13}`}>
+        <StyledLink to={`/books/${book.isbn13}`}>
          <CartImage src={book.image} alt={book.title} />
         </StyledLink>
         <InfoBlock>
