@@ -1,6 +1,7 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 import { FullStar, EmptyStar, ArrowDown } from "../../assets/icons";
 import { v4 as uuidv4 } from "uuid";
+import { Element } from "react-scroll";
 import { IBook, IBookDetailsApi } from "../../types";
 import { useAppDispatch } from "../../store/hooks/hooks";
 import { addFavorites } from "../../store/slices/userSlice";
@@ -39,9 +40,9 @@ interface IProps {
 }
 
 export const BookDetails = ({ book }: IProps) => {
- useEffect(() => {
-  window.scrollTo(0, 0);
- }, []);
+ //  useEffect(() => {
+ //   window.scrollTo(0, 0);
+ //  }, []);
 
  const previews = book.pdf ? Object.values(book.pdf) : [];
 
@@ -129,51 +130,53 @@ export const BookDetails = ({ book }: IProps) => {
     </InfoBlock>
    </StyledBook>
 
-   <TabsBlock id="details">
-    <Tab isActive={active === "description"} onClick={handleDescription}>
-     Description
-    </Tab>
-    <Tab isActive={active === "authors"} onClick={handleAuthors}>
-     Authors
-    </Tab>
-   </TabsBlock>
-   <TabsPanel>
-    {active === "description" ? (
-     <Description>{book.desc}</Description>
-    ) : active === "authors" ? (
-     <Description>{book.authors}</Description>
-    ) : (
-     "Not Found"
-    )}
-   </TabsPanel>
+   <Element name="details">
+    <TabsBlock>
+     <Tab isActive={active === "description"} onClick={handleDescription}>
+      Description
+     </Tab>
+     <Tab isActive={active === "authors"} onClick={handleAuthors}>
+      Authors
+     </Tab>
+    </TabsBlock>
+    <TabsPanel>
+     {active === "description" ? (
+      <Description>{book.desc}</Description>
+     ) : active === "authors" ? (
+      <Description>{book.authors}</Description>
+     ) : (
+      "Not Found"
+     )}
+    </TabsPanel>
 
-   <IconsBlock>
-    <IconsItem href="https://facebook.com">
-     <IconFacebook id="facebook" />
-    </IconsItem>
-    <IconsItem href="https://twitter.com">
-     <IconTwitter id="twitter" />
-    </IconsItem>
-   </IconsBlock>
+    <IconsBlock>
+     <IconsItem href="https://facebook.com">
+      <IconFacebook id="facebook" />
+     </IconsItem>
+     <IconsItem href="https://twitter.com">
+      <IconTwitter id="twitter" />
+     </IconsItem>
+    </IconsBlock>
 
-   <DetailsList id="details">
-    <Params>Authors</Params>
-    <Attribute>{book.authors}</Attribute>
-    <Params>Publisher</Params>
-    <Attribute>{book.publisher}</Attribute>
-    <Params>Language</Params>
-    <Attribute>{book.language}</Attribute>
-    <Params>Pages</Params>
-    <Attribute>{book.pages}</Attribute>
-    <Params>Year</Params>
-    <Attribute>{book.year}</Attribute>
-    <Params>ISBN 10</Params>
-    <Attribute>{book.isbn10}</Attribute>
-    <Params>ISBN 13</Params>
-    <Attribute>{book.isbn13}</Attribute>
-    <Params>URL </Params>
-    <Attribute>{book.url}</Attribute>
-   </DetailsList>
+    <DetailsList>
+     <Params>Authors</Params>
+     <Attribute>{book.authors}</Attribute>
+     <Params>Publisher</Params>
+     <Attribute>{book.publisher}</Attribute>
+     <Params>Language</Params>
+     <Attribute>{book.language}</Attribute>
+     <Params>Pages</Params>
+     <Attribute>{book.pages}</Attribute>
+     <Params>Year</Params>
+     <Attribute>{book.year}</Attribute>
+     <Params>ISBN 10</Params>
+     <Attribute>{book.isbn10}</Attribute>
+     <Params>ISBN 13</Params>
+     <Attribute>{book.isbn13}</Attribute>
+     <Params>URL </Params>
+     <Attribute>{book.url}</Attribute>
+    </DetailsList>
+   </Element>
   </>
  );
 };
