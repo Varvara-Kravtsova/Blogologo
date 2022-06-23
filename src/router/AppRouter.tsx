@@ -5,6 +5,7 @@ import { CartBooks } from "../pages/CartBooks";
 import { DetailsBook } from "../pages/DetailsBook";
 import { FavoritesBooks } from "../pages/FavoritesBooks";
 import { Home } from "../pages/Home";
+import { NotFound } from "../pages/NotFound/NotFound";
 import { SearchBooks } from "../pages/SearchBooks";
 import { SignIn } from "../pages/SignIn";
 import { SignUp } from "../pages/SignUp";
@@ -22,6 +23,7 @@ export const AppRouter = () => {
     <Route path={routes.SIGN_IN} element={<SignIn />} />
     <Route path={routes.SIGN_UP} element={<SignUp />} />
     <Route path={routes.ACCOUNT} element={<Account />} />
+    <Route path={routes.NOT_FOUND} element={<NotFound />} />
    </Route>
   </Routes>
  );
