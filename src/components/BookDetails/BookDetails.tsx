@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { FullStar, EmptyStar, ArrowDown } from "../../assets/icons";
 import { v4 as uuidv4 } from "uuid";
 import { Element } from "react-scroll";
@@ -40,9 +40,9 @@ interface IProps {
 }
 
 export const BookDetails = ({ book }: IProps) => {
- //  useEffect(() => {
- //   window.scrollTo(0, 0);
- //  }, []);
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
 
  const previews = book.pdf ? Object.values(book.pdf) : [];
 
