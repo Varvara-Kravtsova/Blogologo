@@ -7,27 +7,17 @@ import { Pagination } from "../components/Pagination/Pagination";
 import { useAppSelector, useAppDispatch } from "../store/hooks/hooks";
 import { getBooks, getBooksStatus } from "../store/selectors/bookSelectors";
 import { fetchBooksBySearch } from "../store/slices/bookSlice";
-import { ISearchBooksApi } from "../types";
-import { bookApi } from "../services/bookService";
 import { Subtitle } from "../components/Subtitle/Subtitle";
 import Loader from "../components/Loader/Loader";
 
 export const SearchBooks = () => {
  const { title = "", page = "" } = useParams();
- const { books } = useAppSelector(getBooks);
- //  const dispatch = useAppDispatch();
-
- const [searchResult, setSearchResult] = useState<ISearchBooksApi>();
-
- //  useEffect(() => {
- //   dispatch(fetchBooksBySearch({ title, page }));
- //  }, [title, dispatch, page]);
+ const { books, total } = useAppSelector(getBooks);
+ const dispatch = useAppDispatch();
 
  useEffect(() => {
-  bookApi.getBooksBySearch(title, page).then((books) => {
-   setSearchResult(books);
-  });
- }, [title, page]);
+  dispatch(fetchBooksBySearch({ title, page }));
+ }, [title, dispatch, page]);
 
  const status = useAppSelector(getBooksStatus);
  if (status === "loading") {
@@ -41,7 +31,7 @@ export const SearchBooks = () => {
   <>
    <BackButton />
    <Title> '{title}' search results</Title>
-   <Subtitle>Found {searchResult?.total} books</Subtitle>
+   <Subtitle>Found {total} books</Subtitle>
    <BookList books={books ? books : []} />
    <Pagination />
   </>
