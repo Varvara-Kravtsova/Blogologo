@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/Bookstore/static/js/main.1c397f65.js",
+    "static/media/logo.svg": "/Bookstore/static/media/logo.7cb24bfd069f745101cee82e86f25e00.svg",
+    "static/media/minus.svg": "/Bookstore/static/media/minus.f4aa500cddc2cc33dfd9d197156078ea.svg",
+    "static/media/arrow-back.svg": "/Bookstore/static/media/arrow-back.0a76a28f6b68f6dcc1635b73fc067cfc.svg",
+    "static/media/arrow-right.svg": "/Bookstore/static/media/arrow-right.d46cdb8d273a078d2c06a7dc68582c06.svg",
+    "static/media/empty-star.svg": "/Bookstore/static/media/empty-star.ca1c8546c18516100835ad556b27790f.svg",
+    "static/media/full-star.svg": "/Bookstore/static/media/full-star.586ae138326cdb1cfeed35f59c01c46d.svg",
+    "static/media/heart.svg": "/Bookstore/static/media/heart.5ec373d9a9effc188b8ee7db9e49b79e.svg",
+    "static/media/arrow-lefttrue.svg": "/Bookstore/static/media/arrow-lefttrue.5b594af78d33197a92554ebe04fdceae.svg",
+    "static/media/twitter.svg": "/Bookstore/static/media/twitter.b06d5403d71eae8efa46ed5d33ce8253.svg",
+    "static/media/cancel.svg": "/Bookstore/static/media/cancel.543bada9be448c1ce107daa6736ed7c3.svg",
+    "static/media/shopping-bag.svg": "/Bookstore/static/media/shopping-bag.596dd00b2044cb036b288d2bbc8028e8.svg",
+    "static/media/arrow-down.svg": "/Bookstore/static/media/arrow-down.ab9d03d69d9c2464acb0089fbd6cd549.svg",
+    "static/media/details.svg": "/Bookstore/static/media/details.ab9d03d69d9c2464acb0089fbd6cd549.svg",
+    "static/media/user.svg": "/Bookstore/static/media/user.374f708c85fcf8816cf4227ff19d9d9b.svg",
+    "static/media/search.svg": "/Bookstore/static/media/search.8d0bb701e5bcccbe3118a3e95fbc561b.svg",
+    "static/media/plus.svg": "/Bookstore/static/media/plus.e00aaf8b828bce4d6bd91c8f98b5e3ff.svg",
+    "static/media/facebook.svg": "/Bookstore/static/media/facebook.ae7f7ac6437ae988998203c414a9b57f.svg",
+    "index.html": "/Bookstore/index.html",
+    "static/media/circle.svg": "/Bookstore/static/media/circle.7af6dc74a68f7c3633b31936c5391723.svg",
+    "main.1c397f65.js.map": "/Bookstore/static/js/main.1c397f65.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.1c397f65.js"
+  ]
+}
