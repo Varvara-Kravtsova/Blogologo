@@ -84,6 +84,7 @@ Search by:
 - [React Hook Form](https://react-hook-form.com/)
 - [Axios](https://axios-http.com/docs/intro)
 - [Firebase](https://firebase.google.com/)
+- [React-Loading](https://www.npmjs.com/package/react-loading?ref=hackernoon.com)
 - [React-Scroll](https://www.npmjs.com/package/react-scroll)
 - [React-Uuid](https://www.npmjs.com/package/uuid)
 - [gh-pages](https://pages.github.com/)
