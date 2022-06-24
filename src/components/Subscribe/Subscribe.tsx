@@ -10,12 +10,12 @@ import {
  SubscribeBlock,
 } from "./styles";
 
-type InputValue = {
+type FormValue = {
  email: string;
 };
 
 const Subscribe = () => {
- const { register } = useForm<InputValue>();
+ const { register } = useForm<FormValue>();
  return (
   <StyledSubscribe>
    <Container>
@@ -27,6 +27,7 @@ const Subscribe = () => {
      </SubscribeSubtitle>
      <SubscribeForm>
       <SubscribeInput
+       type="email"
        placeholder="Your email"
        {...register("email", { required: true })}
       />
