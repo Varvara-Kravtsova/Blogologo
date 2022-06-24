@@ -5,11 +5,12 @@ import BackButton from "../components/BackButton/BackButton";
 import { Title } from "../components/Title/Title";
 import { Pagination } from "../components/Pagination/Pagination";
 import { useAppSelector, useAppDispatch } from "../store/hooks/hooks";
-import { getBooks } from "../store/selectors/bookSelectors";
+import { getBooks, getBooksStatus } from "../store/selectors/bookSelectors";
 import { fetchBooksBySearch } from "../store/slices/bookSlice";
 import { ISearchBooksApi } from "../types";
 import { bookApi } from "../services/bookService";
 import { Subtitle } from "../components/Subtitle/Subtitle";
+import Loader from "../components/Loader/Loader";
 
 export const SearchBooks = () => {
  const { title = "", page = "" } = useParams();
@@ -27,6 +28,14 @@ export const SearchBooks = () => {
    setSearchResult(books);
   });
  }, [title, page]);
+
+ const status = useAppSelector(getBooksStatus);
+ if (status === "loading") {
+  return <Loader />;
+ }
+ if (status === "error") {
+  return <Title>Something's wrong. Come back later</Title>;
+ }
 
  return (
   <>
